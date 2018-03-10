@@ -9,7 +9,7 @@ Summary:	Test2::Suite - Distribution with a rich set of tools built upon the Tes
 Summary(pl.UTF-8):	Test2::Suite - pakiet z bogatym zestawem narzędzi opartych na szkielecie Test2
 Name:		perl-Test2-Suite
 Version:	0.000106
-Release:	1
+Release:	2
 # same as perl 5
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -19,12 +19,16 @@ URL:		http://search.cpan.org/dist/Test2-Suite/
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Importer >= 0.010
+BuildRequires:	perl-Importer >= 0.024
+BuildRequires:	perl-Module-Pluggable >= 2.7
 BuildRequires:	perl-Scalar-List-Utils
-BuildRequires:	perl-Test-Simple >= 1.302032
+BuildRequires:	perl-Scope-Guard
+BuildRequires:	perl-Sub-Info >= 0.002
+BuildRequires:	perl-Term-Table >= 0.002
+BuildRequires:	perl-Test-Simple >= 1.302127
 %endif
-Requires:	perl-Importer >= 0.010
-Requires:	perl-Test-Simple >= 1.302032
+Requires:	perl-Importer >= 0.024
+Requires:	perl-Test-Simple >= 1.302127
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
