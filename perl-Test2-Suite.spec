@@ -4,7 +4,6 @@
 #
 %define		pdir	Test2
 %define		pnam	Suite
-%include	/usr/lib/rpm/macros.perl
 Summary:	Test2::Suite - Distribution with a rich set of tools built upon the Test2 framework
 Summary(pl.UTF-8):	Test2::Suite - pakiet z bogatym zestawem narzędzi opartych na szkielecie Test2
 Name:		perl-Test2-Suite
