@@ -8,7 +8,7 @@ Summary:	Test2::Suite - Distribution with a rich set of tools built upon the Tes
 Summary(pl.UTF-8):	Test2::Suite - pakiet z bogatym zestawem narzędzi opartych na szkielecie Test2
 Name:		perl-Test2-Suite
 Version:	0.000115
-Release:	1
+Release:	2
 # same as perl 5
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -63,6 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README.md
+%dir %{perl_vendorlib}/Test2
 %{perl_vendorlib}/Test2/AsyncSubtest.pm
 %{perl_vendorlib}/Test2/AsyncSubtest
 %{perl_vendorlib}/Test2/Bundle.pm
@@ -81,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Test2/Todo.pm
 %{perl_vendorlib}/Test2/Tools.pm
 %{perl_vendorlib}/Test2/Tools
+%dir %{perl_vendorlib}/Test2/Util
 %{perl_vendorlib}/Test2/Util/Grabber.pm
 %{perl_vendorlib}/Test2/Util/Ref.pm
 %{perl_vendorlib}/Test2/Util/Stash.pm
