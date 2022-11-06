@@ -1,19 +1,19 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Test2
 %define		pnam	Suite
 Summary:	Test2::Suite - Distribution with a rich set of tools built upon the Test2 framework
 Summary(pl.UTF-8):	Test2::Suite - pakiet z bogatym zestawem narzędzi opartych na szkielecie Test2
 Name:		perl-Test2-Suite
-Version:	0.000140
+Version:	0.000145
 Release:	1
 # same as perl 5
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/E/EX/EXODIST/Test2-Suite-%{version}.tar.gz
-# Source0-md5:	2ccca23d640361f9c6f4912d676f15c8
+# Source0-md5:	5fcc87c264a1e93fe7cb0879a0abae15
 URL:		https://metacpan.org/release/Test2-Suite
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
