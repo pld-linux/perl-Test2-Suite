@@ -7,21 +7,21 @@
 Summary:	Test2::Suite - Distribution with a rich set of tools built upon the Test2 framework
 Summary(pl.UTF-8):	Test2::Suite - pakiet z bogatym zestawem narzędzi opartych na szkielecie Test2
 Name:		perl-Test2-Suite
-Version:	0.000145
+Version:	0.000163
 Release:	1
 # same as perl 5
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/E/EX/EXODIST/Test2-Suite-%{version}.tar.gz
-# Source0-md5:	5fcc87c264a1e93fe7cb0879a0abae15
-URL:		https://metacpan.org/release/Test2-Suite
+Source0:	https://www.cpan.org/modules/by-authors/id/E/EX/EXODIST/Test2-Suite-%{version}.tar.gz
+# Source0-md5:	0f8baa47c020ba38191a71587db8899b
+URL:		https://metacpan.org/dist/Test2-Suite
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-Importer >= 0.024
 BuildRequires:	perl-Module-Pluggable >= 2.7
-BuildRequires:	perl-Scalar-List-Utils
+BuildRequires:	perl-Scalar-List-Utils >= 1.13
 BuildRequires:	perl-Scope-Guard
 BuildRequires:	perl-Sub-Info >= 0.002
 BuildRequires:	perl-Term-Table >= 0.013
@@ -84,6 +84,8 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Test2/Tools
 %dir %{perl_vendorlib}/Test2/Util
 %{perl_vendorlib}/Test2/Util/Grabber.pm
+%{perl_vendorlib}/Test2/Util/Guard.pm
+%{perl_vendorlib}/Test2/Util/Importer.pm
 %{perl_vendorlib}/Test2/Util/Ref.pm
 %{perl_vendorlib}/Test2/Util/Stash.pm
 %{perl_vendorlib}/Test2/Util/Sub.pm
@@ -105,6 +107,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/Test2::Todo.3pm*
 %{_mandir}/man3/Test2::Tools*.3pm*
 %{_mandir}/man3/Test2::Util::Grabber.3pm*
+%{_mandir}/man3/Test2::Util::Guard.3pm*
+%{_mandir}/man3/Test2::Util::Importer.3pm*
 %{_mandir}/man3/Test2::Util::Ref.3pm*
 %{_mandir}/man3/Test2::Util::Stash.3pm*
 %{_mandir}/man3/Test2::Util::Sub.3pm*
